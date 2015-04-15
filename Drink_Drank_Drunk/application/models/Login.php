@@ -39,6 +39,7 @@
 					'name' => $results['name'],
 					'username' => $results['username'],
 					'password' => $results['password'],
+					'weight' => $results['weight'],
 				);
 
 				$this->session->set_userdata($userdata);

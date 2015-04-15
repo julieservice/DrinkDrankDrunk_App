@@ -1,4 +1,5 @@
 <div id="pushDown"></div>
+<a href="<?php echo base_url(); ?>page/adddrink"><img src="<?php echo base_url(); ?>images/arrow.png" alt="back arrow" class="arrow"></a>
 <h2> Other Drink</h2>
 <p>Enter in your own custom drinks here</p>
 

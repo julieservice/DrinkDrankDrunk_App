@@ -39,7 +39,7 @@
           <td align="center"><input type="text" name="percent" size="6"></td>
        
           <td align="center">Your Weight (Lbs)</td>
-          <td align="center"><input type="text" name="weight" size="6" value="<?php echo $info['weight']; ?>"></td>
+          <td align="center"><input id="weight" type="text" name="weight" size="6" value="<?php echo $weight; ?>"></td>
           <td align="center">Hours Consuming Drink</td>
           <td align="center"><input type="text" name="hours" size="6"></td>
        

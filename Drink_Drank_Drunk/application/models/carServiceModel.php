@@ -18,11 +18,4 @@
 			return $query->row_array();
 		}
 
-		function getDrinksByType($typeid){
-			$this->db->from('tbl_drinks, tbl_drinktype, tbl_drink_drinktype');
-			$this->db->where('tbl_drink_drinktype.drinktype_id = tbl_drinktype.drinktype_id AND tbl_drink_drinktype.drink_id = tbl_drinks.drink_id AND tbl_drinktype.drinktype_id = '.$typeid);
-			$drinkQuery = $this->db->get();
-			return $drinkQuery->result_array();
-		}
-
 	}

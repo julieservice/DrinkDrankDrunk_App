@@ -10,9 +10,18 @@
 		}
 
 		function getDrinks($typeid){
+			$data = array(
+				'userid' => $this->session->userdata('userid'),
+				'name' => $this->session->userdata('name'),
+				'username' => $this->session->userdata('username'),
+				'password' => $this->session->userdata('password')
+				
+			);
 			$data['type'] = $this->drinksModel->getType($typeid);
 			$data['drinks'] = $this->drinksModel->getDrinksByType($typeid);
 			$this->load->view('header');
+			
+			$this->load->view('nav', $data);
 			$this->load->view('drinklist', $data);
 			$this->load->view('footer');
 		}

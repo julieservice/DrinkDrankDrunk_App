@@ -10,12 +10,12 @@
 	?>
 
 	<?php echo validation_errors();?>
-	
+
 	<?php echo form_open('login'); ?>
 
 		<input type="text" name="username" placeholder="User Name:">
 		<br>
-		<input type="text" name="password" placeholder="Password:">
+		<input type="password" name="password" placeholder="Password:">
 		<br>
 		<input id="submit" type="submit" value="Submit">
 	</form>

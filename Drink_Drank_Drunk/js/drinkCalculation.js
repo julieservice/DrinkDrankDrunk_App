@@ -9,10 +9,11 @@ var hours = eval(form.hours.value);
 
 var result = (ounces * percent * 0.075 / weight) - (hours * 0.015);
 result = Math.round(result * 1000) / 1000;
-if (result < 0) {
+
+
+if (result <= 0) {
 message = "There is a negligible amount of alcohol in your system. You are not legally intoxicated.";
-form.bacamount.value = result + " %";
-//result = "-- neglible amount --";
+result = 0;
 }
 else {
 if (result > 0.08)
@@ -24,8 +25,6 @@ else message = "Enter all information above before calculating.";
 form.message.value = message;
 form.bacamount.value = result + " %";
 }
-
-
 
 
 

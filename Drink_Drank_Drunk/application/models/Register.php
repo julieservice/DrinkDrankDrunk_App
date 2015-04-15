@@ -9,21 +9,25 @@
 		}
 
 		public function register() {
-			$checkuser = $this->input->post('username');
-			$check = $this->db->get_where('tbl_user',array('username'=>$checkuser));
-			if($check->num_rows() > 0){return "exist";}
+			$checkuser = $this->input->post('uname');
+			$check = $this->db->get_where('tbl_user', array('username' => $checkuser));
+
+			if($check->num_rows() > 0) {
+				return TRUE;
+			}
+
 			$user = array(
 				'user_id' => NULL,
+				'username' => $this->input->post('uname'),
+				'password' => $this->input->post('password'),
 				'name' => $this->input->post('name'),
-				'age' => $this->input->post('age'),
-				'gender' => $this->input->post('gender'),
 				'weight' => $this->input->post('weight'),
 				'height' => $this->input->post('height'),
-				'username' => $this->input->post('username'),
-				'password' => $this->input->post('password'),
+				'gender' => $this->input->post('gender'),
+				'age' => $this->input->post('age'),
 				'email' => $this->input->post('email'),
-				
 			);
+
 			$this->db->insert('tbl_user',$user);
 		}
 	}
