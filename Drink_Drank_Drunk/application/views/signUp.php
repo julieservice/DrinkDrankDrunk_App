@@ -22,8 +22,8 @@
 			<input type="text" name="age" id="age" placeholder="Age" value="<?=!form_error('age')?set_value('age'):''?>">
 			<h3>Gender</h3>
 			<select name="gender" id="gender">
-					<option value="Male">Male</option>
-				 	<option value="Female">Female</option>
+					<option value="male">Male</option>
+				 	<option value="female">Female</option>
 			</select>
 			<h3>Height (cm)</h3>
 			<input type="text" name="height" id="height" placeholder="Height" value="<?=!form_error('height')?set_value('height'):''?>">

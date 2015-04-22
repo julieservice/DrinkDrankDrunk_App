@@ -17,6 +17,7 @@
 
 body{
 	background-color:#dc5556;
+    
 }
 
 .hidden{
@@ -35,7 +36,7 @@ p{
     color:#fff;
     text-align:center;
     margin:auto auto;
-    width:100%;
+    width:99%;
 }
 h2{
 
@@ -58,6 +59,30 @@ h3{
     width:100%;
 }
 
+a{
+   font-family:'geometria', sans-serif;
+    font-size:1em;
+    width:100%;
+    color:#fff;
+    text-align:center;
+    margin:auto auto;
+    
+}
+#recentDrinks{
+    width:100%;
+    margin: auto auto;
+    text-align: center;
+}
+
+a:hover{
+    color:#404040;
+}
+.submessage{
+    font-size: 1.4em
+}
+.baclabel{
+    font-size: 1.5em;
+    color:#a63d3e; 
 }
 
 /*Navigation*/
@@ -65,20 +90,25 @@ h3{
 .nav{
     text-align:center;
     margin-right:20px;
+    min-height: 100%;
+   
 
 }
 .navContainer{
-
     width:50%;
-    position:absolute;
+    position:fixed;
     right:0;
+
 }
 .top-bar{
-    background-color:#dc5556;
+    background: rgba(200, 54, 54, 0); 
     
-
-
+    
 }
+.top-bar-section ul li {
+  
+}
+
 #currentBAC{
     background-color:#404040;
     
@@ -188,12 +218,19 @@ input[type="password"], select, input[type="password"]:focus{
 :-ms-input-placeholder {  
    color: #fff;  
 }
+.add{
+    float:right;
+    width:30px;
+    margin-top:-35px;
+    margin-right:10px;
+}
 
 
 
 /*Results*/
 .number{
     font-size:7em;
+    margin-bottom:-20px;
 }
 .chart{
     width:95%;
@@ -213,11 +250,14 @@ input[type="password"], select, input[type="password"]:focus{
 
 }
 #carOptions{
-    margin-top:75px;
+    margin-top:25px;
 }
 .servicedetails{
     display:none;
+    margin-top:-30px;
+    background-color:#a63d3e;
 }
+
 
 
 /*Edit Profile*/

@@ -38,16 +38,19 @@
 |
 */
 
-//CHANGE CONTROLLER TO YOUR DEFAULT ONLOAD (starts as welcome, yours is nav)
 $route['default_controller'] = "nav";
 $route['404_override'] = '';
 $route['signup'] = 'pages/view/signup';
 $route['login'] = 'pages/login';
 $route['logout'] = 'pages/logout';
+//$route['page/(:any)(:any)'] = 'find/send/$2';
+$route['page/(:any)/(:any)'] = 'find/send/$2';
 $route['page/(:any)'] = 'nav/view/$1';
 $route['type/(:any)'] = 'drinks/getDrinks/$1';
 $route['services'] = 'carService/getAllServices';
 $route['service/(:any)'] = 'carService/getService/$1';
+$route['profile/edit'] = 'profile/editProfile';
+
 
 
 /* End of file routes.php */

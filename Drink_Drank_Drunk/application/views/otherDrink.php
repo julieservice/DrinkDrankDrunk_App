@@ -21,6 +21,7 @@
 		  <option value="3">Shot</option>
 		  <option value="4">Martini</option>
 		  <option value="5">Mixed Drink</option>
+		  <option value="6">Cooler</option>
 	</select>
-	<input id="submit" type="submit" value="Submit">
+	<input id="submit" type="submit" value="Add Drink">
 </form>

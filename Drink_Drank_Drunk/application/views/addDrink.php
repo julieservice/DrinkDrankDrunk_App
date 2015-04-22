@@ -1,12 +1,12 @@
 <div id="pushDown"></div>
 <h2>Add Drink</h2>
-<p>Add Drinks throughout the night to calculate your blood alochol level</p>
+<p>Add Drinks throughout the night to calculate your BAC</p>
 <div id="pushDown"></div>
 <section id="recentDrinks">
 <h3>Recent Drinks</h3>
-<p>500ml Somersby Cider<p>
-<p>2oz JagerBomb shot<p>
-<p>12oz Cranberry Vodka<p>
+<?php foreach($dinfo as $row){ ?>
+<a href="<?php echo base_url(); ?>drinks/addToSession/<?php echo $row['drink_id']; ?>"><?php echo $row['title']; ?></p></a>
+<?php } ?>
 </section>
 <div id="pushDown"></div>
 

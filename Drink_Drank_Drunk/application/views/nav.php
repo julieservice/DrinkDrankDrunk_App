@@ -12,7 +12,20 @@
                 
                 <div id="currentBAC">
                   <h2><?php echo $name; ?></h2>
-                  <h2 class="BACnum">0.08</h2>
+                  <h2 class="BACnum">
+                    <?php 
+                      $numItems = count($currBAC);
+                      if($numItems == 0) {
+                        echo "0";
+                      }
+                      $i = 0;
+                      foreach($currBAC as $row) {
+                        if(++$i === $numItems) {
+                          echo $row['CurrentBAC'];
+                        }
+                      }
+                    ?>
+                  </h2>
                   <p>Blood Alcohol Content</p>
                 </div>
 

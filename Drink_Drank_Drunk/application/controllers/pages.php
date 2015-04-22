@@ -6,9 +6,10 @@ class Pages extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Register');
 		$this->load->model('Login');
+		$this->load->model('drinkToUserModel');
 	}
 
-	public function index() {
+	/*public function index() {
 		$data['error'] = FALSE;
 		$data = array(
 			'userid' => $this->session->userdata('userid'),
@@ -22,16 +23,14 @@ class Pages extends CI_Controller {
 		$this->load->view('landing');
 		//$this->load->view('footer');
 
-	}
+	}*/
+
 	public function view($page) {
 		$this->load->view('header');
 
 		if($page == "signup") {
 			$data['error'] = FALSE;
 			$this->load->view('signUp', $data);
-		}
-		if($page == "drinkbeer"){
-			$this->load->view('drinkBeer');
 		}
 
 		//$this->load->view('footer');
@@ -66,8 +65,8 @@ class Pages extends CI_Controller {
 			} else{
 
 				//$this->load->view('header');//if user name doesnt exist and form is valid
-				$this->load->view('regSuccess');
-
+				//$this->load->view('regSuccess');
+				redirect('login');
 			}
 			$this->load->view('footer');
 		}
@@ -96,13 +95,16 @@ class Pages extends CI_Controller {
 			}
 			else{
 				$sess = $this->Login->session($user);
+				$this->drinkToUserModel->deleteSessionDrinks();
 				redirect('page/results');
 
 			}
 		}
 	}
 
-	public function logout() {//on sign out, session is distroyed and will redirct to landing page
+	public function logout() {//on sign out, session is destroyed and will redirct to landing page
+		$this->drinkToUserModel->deleteSessionDrinks();
+
 		$this->session->sess_destroy();
 		redirect('login');
 	}

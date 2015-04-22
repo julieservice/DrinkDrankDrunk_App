@@ -2,9 +2,9 @@ var showDetails;
 
 function init(){
 	showDetails = document.querySelectorAll(".services");
-	for(i = 0; i<showDetails.length; i++){
+	/*for(i = 0; i<showDetails.length; i++){
 	showDetails[i].addEventListener("click", showAll, false);
-	}
+	}*/
 }
 
 function showAll(){
@@ -17,6 +17,7 @@ function showAll(){
 		showDetails[i].addEventListener("click", hideAll, false);
 	}
 }
+
 function hideAll(){
 	var details = document.querySelectorAll(".servicedetails");
 	for(i = 0; i<details.length; i++){
@@ -24,8 +25,20 @@ function hideAll(){
 	}
 	for(i = 0; i<showDetails.length; i++){
 		showDetails[i].removeEventListener("click", hideAll);
-		showDetails[i].addEventListener("click", showAll, false);
 	}
+}
+
+function showByID(id){
+	console.log("running");
+	console.log(id);
+	var detail = document.querySelector(".detail"+id);
+	var holder = document.querySelector(".service"+id);
+	detail.style.display = "block";
+
+	for(i = 0; i<showDetails.length; i++){
+		showDetails[i].addEventListener("click", hideAll, false);
+	}
+
 }
 
 window.addEventListener("load", init, false);

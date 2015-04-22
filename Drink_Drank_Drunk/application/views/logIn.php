@@ -23,5 +23,5 @@
 	<a href="<?php echo base_url(); ?>signup"><p>Sign up!</p></a>
 
 	<p class="warning">This conversion is not completely accurate and should be used at your own risk.</p>
-
+	<p>Drinks will be cleared 12 hours after login</p>
 </section>

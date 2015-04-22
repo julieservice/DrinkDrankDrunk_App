@@ -6,6 +6,6 @@
 
 <section id="drinkOptions">
 	<?php foreach($drinks as $row) { ?>
-		<a href="#"><div class="bars"><p><?php echo $row['title']; ?></p></div></a>
+		<a href="<?php echo base_url(); ?>drinks/addToSession/<?php echo $row['drink_id']; ?>"><div class="bars"><p><?php echo $row['title']; ?></p></div></a>
 	<?php } ?>
 </section>

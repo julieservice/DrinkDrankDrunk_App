@@ -40,6 +40,10 @@
 					'username' => $results['username'],
 					'password' => $results['password'],
 					'weight' => $results['weight'],
+					'height' => $results['height'],
+					'gender' => $results['gender'],
+					'age' => $results['age'],
+					'email' => $results['email']
 				);
 
 				$this->session->set_userdata($userdata);

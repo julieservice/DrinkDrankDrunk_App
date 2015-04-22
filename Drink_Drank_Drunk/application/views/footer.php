@@ -7,6 +7,5 @@
     </script>
 
     <script src="<?php echo base_url(); ?>js/main.js"></script>
-    <script src="<?php echo base_url(); ?>js/drinkCalculation.js"></script>
   </body> 
   </html>

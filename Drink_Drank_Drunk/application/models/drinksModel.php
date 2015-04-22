@@ -25,4 +25,36 @@
 			return $drinkQuery->result_array();
 		}
 
+		function getSessionAlcoholPercent() {
+			$user = $this->session->userdata('userid');
+
+			$this->db->select('(SELECT SUM(aamount_in_oz) FROM tbl_user_drink WHERE user_id = '.$user.') AS percent');
+			$query = $this->db->get();
+			return $query->row_array();
+		}
+
+		function getSessionOunces() {
+			$user = $this->session->userdata('userid');
+
+			$this->db->select('(SELECT SUM(quantity) FROM tbl_user_drink WHERE user_id = '.$user.') AS oz');
+			$query = $this->db->get();
+			return $query->row_array();
+		}
+		function getDrinkInfo() {
+			$user = $this->session->userdata('userid');
+			$this->db->from('tbl_user_drink');
+			$this->db->where('user_id = '.$user);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
+
+		function getBAC() {
+			$user = $this->session->userdata('userid');
+
+			$this->db->from('tbl_user_drink');
+			$this->db->where('user_id = '.$user);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
+
 	}
